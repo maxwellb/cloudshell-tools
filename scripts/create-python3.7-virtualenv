@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python -m virtualenv -p $HOME/.local/bin/python3.7 $HOME

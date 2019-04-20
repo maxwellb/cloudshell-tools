@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+REGION=${1:-"East US"}
+
+T=$(az vm list-usage --location "$REGION" -o table)
+echo "$T" | head -n 2
+echo "$T" | grep '.*vCPUs' | sort
+

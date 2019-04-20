@@ -1,0 +1,1 @@
+alias ansicolors='seq 0 25 | while read r; do printf "%5d--%-5d" $((10*r)) $((10*r+9)); seq 0 9 | while readc; do printf "\e[38;5;%dm##%d##\e[0m   " $((10*r+c)) $c; done; echo ""; done'

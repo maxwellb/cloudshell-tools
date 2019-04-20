@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+CPUTYPE=${1:-"D"}
+REGION=${2:-"East US"}
+PATTERN="(${CPUTYPE}[Ss]?(v[0-9])? (Promo )?Family vCPUs)|--+|(Name|CurrentValue|Limit)"
+
+echo "\$ az vm list-usage --location \"$REGION\" -o table | grep '${CPUTYPE}(...).*vCPUs'"
+get-cpu-usage "$REGION" | grep -E "$PATTERN"
+
