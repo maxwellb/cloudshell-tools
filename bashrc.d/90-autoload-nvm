@@ -1,0 +1,11 @@
+# This adds significant startup time to your bash
+# Consider sourcing it only when necessary
+# Or use PowerShell as cloudshell default, and enter bash with `> bash`
+export NVM_DIR="$HOME/.nvm"
+printf "."
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+npm outdated --global
+printf "."
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+printf "."
+nvm use default

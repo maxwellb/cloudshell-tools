@@ -1,0 +1,2 @@
+mkdir -p /tmp/home
+ln -sf /tmp/home $HOME/tmp
