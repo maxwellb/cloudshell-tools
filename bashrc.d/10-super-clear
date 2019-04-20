@@ -1,0 +1,1 @@
+alias clear='clear && ([ -x ~/.motd ] && ~/.motd || true) || ([ -f ~/.motd ] && cat ~/.motd)'
